@@ -1,0 +1,186 @@
+body {
+  font-family: "Prompt", system-ui;
+}
+
+.signature-pad {
+  border: 1px solid #ccc;
+  width: 100%;
+  height: 200px;
+  max-width: 100%;
+}
+.hidden {
+  display: none;
+}
+.nav-link.active {
+  background-color: #ee3424;
+  color: white !important;
+  font-weight: 700;
+}
+/* Heading Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #011e41; /* Dark blue color for headings */
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Form Styles */
+form {
+  margin: 2rem 0;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #011e41; /* Dark blue color for labels */
+  font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="time"],
+form input[type="date"],
+form input[type="datetime-local"],
+form input[type="email"],
+form input[type="password"],
+form textarea,
+form select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #011e41; /* Dark blue color for input text */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for input fields */
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form input[type="number"]:focus,
+form input[type="time"]:focus,
+form input[type="date"]:focus,
+form input[type="datetime-local"]:focus,
+form textarea:focus,
+form select:focus {
+  border-color: #011e41; /* Red color for focus state */
+  outline: none;
+  box-shadow: 0 2px 8px rgba(1, 30, 65, 0.2); /* Box shadow for focus state */
+}
+
+form button[type="submit"] {
+  background-color: #ee3424; /* Red color for submit button */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for submit button */
+}
+
+form button[type="submit"]:hover {
+  background-color: #c42b1f; /* Darker red color on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for hover state */
+}
+
+form .error-message {
+  color: #ee3424; /* Red color for error messages */
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+/* Checkbox Styles */
+form input[type="checkbox"] {
+  margin-right: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for checkboxes */
+}
+
+/* Card Styles */
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for cards */
+  margin-bottom: 1.5rem;
+}
+
+.card-header {
+  background-color: #011e41; /* Dark blue color for card header */
+  color: white;
+  padding: 1rem;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  font-weight: bold;
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-body h2 {
+  color: #011e41; /* Dark blue color for card headings */
+  margin-bottom: 1rem;
+}
+
+.card-body p {
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for tables */
+}
+
+table th,
+table td {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+}
+
+table th {
+  background-color: #011e41; /* Dark blue color for table headers */
+  color: white;
+  font-weight: bold;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2; /* Light gray background for even rows */
+}
+
+table tr:hover {
+  background-color: #ddd; /* Light gray background on hover */
+}
+
+.btn-primary-serviqual {
+  background-color: #011e41; /* Dark blue color for primary button */
+  color: white;
+}
+
+.btn-primary-serviqual:hover {
+  background-color: #003366; /* Darker blue color on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for hover state */
+  color: white;
+}
+
+.btn-secondary-serviqual {
+  background-color: #ee3424; /* Red color for secondary button */
+  color: white;
+}
+
+.btn-secondary-serviqual:hover {
+  background-color: #c42b1f; /* Darker red color on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for hover state */
+  color: white;
+}

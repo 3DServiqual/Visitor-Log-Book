@@ -1,0 +1,373 @@
+<div class="container">
+  <h1 class="mt-5">IT Intervention Form</h1>
+  <form id="it-intervention-form">
+    <input type="hidden" id="interventionId" name="id" />
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="incidentId" class="form-label">Incident ID No:</label>
+        <input
+          type="text"
+          class="form-control"
+          id="incidentId"
+          name="incidentId"
+          placeholder="Enter Incident ID"
+          required
+        />
+      </div>
+      <div class="col-md-6">
+        <label for="date" class="form-label">Date:</label>
+        <input
+          type="date"
+          class="form-control"
+          id="date"
+          name="date"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="card mb-4">
+      <div class="card-header bg-navy">
+        Details of IT Solution Provider:
+      </div>
+      <div class="card-body">
+        <div class="mb-3">
+          <label for="companyName" class="form-label">Company Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="companyName"
+            name="companyName"
+            placeholder="Enter Company Name"
+            required
+          />
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="contactPerson" class="form-label">Contact person:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="contactPerson"
+              name="contactPerson"
+              placeholder="Enter Contact Person's Name"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="phoneOrFax" class="form-label">Phone or Fax No.:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="phoneOrFax"
+              name="phoneOrFax"
+              placeholder="Enter Phone or Fax Number"
+              required
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="workStarted" class="form-label">Work started at:</label>
+            <input
+              type="datetime-local"
+              class="form-control"
+              id="workStarted"
+              name="workStarted"
+              required
+            />
+          </div>
+          <div class="col-md-6">
+            <label for="workCompleted" class="form-label">Work completed at:</label>
+            <input
+              type="datetime-local"
+              class="form-control"
+              id="workCompleted"
+              name="workCompleted"
+              required
+            />
+          </div>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Please tick as appropriate:</label>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="billable"
+              name="billable"
+            />
+            <label class="form-check-label" for="billable">Billable Contract/SLA</label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="warranty"
+              name="warranty"
+            />
+            <label class="form-check-label" for="warranty">Warranty</label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="maintenance"
+              name="maintenance"
+            />
+            <label
+              class="form-check-label"
+              for="maintenance"
+            >Maintenance</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-4">
+      <div class="card-header bg-navy">
+        Hardware / Software details:
+      </div>
+      <div class="card-body">
+        <div class="mb-3">
+          <label for="hardwareSoftwareName" class="form-label">Hardware /
+            Software Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="hardwareSoftwareName"
+            name="hardwareSoftwareName"
+            placeholder="Enter Hardware/Software Name"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="natureOfIntervention" class="form-label">Nature of
+            intervention:</label>
+          <textarea
+            class="form-control"
+            id="natureOfIntervention"
+            name="natureOfIntervention"
+            rows="3"
+            placeholder="Describe the nature of the intervention"
+            required
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="actionsTaken" class="form-label">Actions Taken:</label>
+          <textarea
+            class="form-control"
+            id="actionsTaken"
+            name="actionsTaken"
+            rows="3"
+            placeholder="Describe the actions taken"
+            required
+          ></textarea>
+          <small class="form-text text-muted">Attach supporting documentation as
+            necessary</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <div class="card-header bg-navy">
+            Sign off of Delegated IT Staff who coordinated the intervention:
+          </div>
+          <div class="card-body">
+            <div class="mb-3">
+              <label for="delegatedStaffName" class="form-label">Name:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="delegatedStaffName"
+                name="delegatedStaffName"
+                placeholder="Enter Name"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="delegatedStaffTitle" class="form-label">Title:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="delegatedStaffTitle"
+                name="delegatedStaffTitle"
+                placeholder="Enter Title"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label
+                for="delegatedStaffSignature"
+                class="form-label"
+              >Signature:</label>
+              <div class="signature-pad" id="delegatedStaffSignaturePad"></div>
+              <input
+                type="hidden"
+                id="delegatedStaffSignature"
+                name="delegatedStaffSignature"
+              />
+              <button
+                type="button"
+                class="btn btn-secondary mt-3"
+                id="clearDelegatedStaffSignature"
+              >Clear Signature</button>
+            </div>
+            <div class="mb-3">
+              <label for="delegatedStaffDate" class="form-label">Date:</label>
+              <input
+                type="date"
+                class="form-control"
+                id="delegatedStaffDate"
+                name="delegatedStaffDate"
+                required
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="card">
+          <div class="card-header bg-navy">
+            Sign off of IT Solution Provider:
+          </div>
+          <div class="card-body">
+            <div class="mb-3">
+              <label for="providerName" class="form-label">Name:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="providerName"
+                name="providerName"
+                placeholder="Enter Name"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="providerTitle" class="form-label">Title:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="providerTitle"
+                name="providerTitle"
+                placeholder="Enter Title"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label
+                for="providerSignature"
+                class="form-label"
+              >Signature:</label>
+              <div class="signature-pad" id="providerSignaturePad"></div>
+              <input
+                type="hidden"
+                id="providerSignature"
+                name="providerSignature"
+              />
+              <button
+                type="button"
+                class="btn btn-secondary mt-3"
+                id="clearProviderSignature"
+              >Clear Signature</button>
+            </div>
+            <div class="mb-3">
+              <label for="providerDate" class="form-label">Date:</label>
+              <input
+                type="date"
+                class="form-control"
+                id="providerDate"
+                name="providerDate"
+                required
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <h2 class="mt-5">IT Interventions Logs Table</h2>
+  <div id="it-intervention-logs">
+    <input
+      class="search form-control mb-3"
+      placeholder="Search by Incident ID or company"
+    />
+    {{! <button id="delete-all" class="btn btn-danger mb-3">Delete All</button> }}
+    <div class="table-responsive">
+      <table
+        class="table table-bordered table-striped hidden"
+        id="it-intervention-logs-table"
+      >
+        <thead>
+          <tr>
+            <th>Incident ID</th>
+            <th>Date</th>
+            <th>Company Name</th>
+            <th>Contact Person</th>
+            <th>Phone or Fax</th>
+            <th>Work Started</th>
+            <th>Work Completed</th>
+            <th>Billable</th>
+            <th>Warranty</th>
+            <th>Maintenance</th>
+            <th>Hardware/Software Name</th>
+            <th>Nature of Intervention</th>
+            <th>Actions Taken</th>
+            <th>Delegated Staff Name</th>
+            <th>Delegated Staff Title</th>
+            {{! <th>Delegated Staff Signature</th> }}
+            <th>Delegated Staff Date</th>
+            <th>Provider Name</th>
+            <th>Provider Title</th>
+            {{! <th>Provider Signature</th> }}
+            <th>Provider Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody class="list">
+          {{#each interventions}}
+            <tr>
+              <td class="incidentid">{{this.incidentId}}</td>
+              <td class="date">{{this.date}}</td>
+              <td class="company">{{this.companyName}}</td>
+              <td class="contactperson">{{this.contactPerson}}</td>
+              <td class="phone">{{this.phoneOrFax}}</td>
+              <td class="workstarted">{{this.workStarted}}</td>
+              <td class="workcompleted">{{this.workCompleted}}</td>
+              <td class="billable">{{this.billable}}</td>
+              <td class="warranty">{{this.warranty}}</td>
+              <td class="maintenance">{{this.maintenance}}</td>
+              <td class="hardwaresoftware">{{this.hardwareSoftwareName}}</td>
+              <td
+                class="natureofintervention"
+              >{{this.natureOfIntervention}}</td>
+              <td class="actionstaken">{{this.actionsTaken}}</td>
+              <td class="delegatedstaffname">{{this.delegatedStaffName}}</td>
+              <td class="delegatedstafftitle">{{this.delegatedStaffTitle}}</td>
+              {{!-- <td
+              class="delegatedstaffsignature"
+            >{{this.delegatedStaffSignature}}</td> --}}
+              <td class="delegatedstaffdate">{{this.delegatedStaffDate}}</td>
+              <td class="providername">{{this.providerName}}</td>
+              <td class="providertitle">{{this.providerTitle}}</td>
+              {{!-- <td class="providersignature">{{this.providerSignature}}</td> --}}
+              <td class="providerdate">{{this.providerDate}}</td>
+              <td><button
+                  class="btn btn-primary-serviqual select-btn"
+                  data-form-type="itIntervention"
+                  data-id="{{this.id}}"
+                  data-delegated-staff-signature="{{this.delegatedStaffSignature}}"
+                  data-provider-signature="{{this.providerSignature}}"
+                >Select</button></td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

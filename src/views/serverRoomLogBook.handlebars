@@ -1,0 +1,166 @@
+<section class="py-md-5 py-3">
+  <div class="container">
+    <h1 class="">Server Room Log</h1>
+    <form id="serverRoom-form">
+      <input type="hidden" id="serverRoomId" name="id" />
+      <div class="row">
+        <div class="col-md-4 mb-3">
+          <div class="form-group">
+            <label class="form-label" for="serverRoomDate">Date:</label>
+            <input
+              type="date"
+              class="form-control"
+              id="serverRoomDate"
+              name="date"
+              required
+              placeholder="Select date"
+            />
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="form-group">
+            <label class="form-label" for="visitorName">Visitor's Name:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="visitorName"
+              name="name"
+              placeholder="Enter visitor's name"
+              required
+            />
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="form-group">
+            <label
+              class="form-label"
+              for="visitorCompany"
+            >Department/Company:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="visitorCompany"
+              placeholder="Department/Company"
+              name="company"
+            />
+          </div>
+        </div>
+        <div class="col-md-12 mb-3">
+          <div class="form-group">
+            <label class="form-label" for="visitorReasonForVisit">Purpose of
+              Visit:</label>
+            <textarea
+              class="form-control"
+              id="visitorReasonForVisit"
+              name="reasonForVisit"
+              placeholder="Enter purpose of visit"
+              required
+            ></textarea>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="form-group">
+            <label class="form-label" for="visitorTimeIn">Time In:</label>
+            <input
+              type="time"
+              class="form-control"
+              id="visitorTimeIn"
+              name="timeIn"
+              required
+              placeholder="Select time"
+            />
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="form-group">
+            <label class="form-label" for="visitorTimeOut">Time Out:</label>
+            <input
+              type="time"
+              class="form-control"
+              id="visitorTimeOut"
+              name="timeOut"
+              placeholder="Select time"
+            />
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="form-group">
+            <label class="form-label" for="serverRoomAccompaniedBy">Accompanied
+              By:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="serverRoomAccompaniedBy"
+              name="accompaniedBy"
+              placeholder="Enter name of person accompanying the visitor"
+              required
+            />
+          </div>
+        </div>
+        <div class="col-md-12 mb-4">
+          <div class="form-group">
+            <label
+              class="form-label"
+              for="serverRoomSignature"
+            >Signature:</label>
+            <div class="signature-pad" id="signature-pad"></div>
+            <input type="hidden" id="serverRoomSignature" name="signature" />
+            <button
+              type="button"
+              class="btn btn-secondary mt-3"
+              id="clear-signature"
+            >Clear Signature</button>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </form>
+
+    <h2 class="mt-5">Server Room Visitor's Logs Table</h2>
+    <div id="serverroom-logs">
+      <input class="search form-control mb-3" placeholder="Search by name" />
+      {{! <button id="delete-all" class="btn btn-danger mb-3">Delete All</button> }}
+      <div class="table-responsive">
+        <table
+          class="table table-bordered table-striped hidden"
+          id="server-room-visitor-logs-table"
+        >
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Name</th>
+              <th>Department/Company</th>
+              <th>Purpose of Visit</th>
+              <th>Time In</th>
+              <th>Time Out</th>
+              <th>Accompanied By</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody class="list">
+            {{log ServerRoomLogs}}
+            {{#each ServerRoomLogs}}
+              <tr>
+                <td class="date">{{this.date}}</td>
+                <td class="name">{{this.name}}</td>
+                <td class="company">{{this.company}}</td>
+                <td class="reasonForVisit">{{this.reasonForVisit}}</td>
+                <td class="timeIn">{{this.timeIn}}</td>
+                <td class="timeOut">{{this.timeOut}}</td>
+                <td class="accompaniedBy">{{this.accompaniedBy}}</td>
+                <td><button
+                    class="btn btn-primary-serviqual select-btn"
+                    data-id="{{this.id}}"
+                    data-form-type="serverRoom"
+                    data-signature="{{this.signature}}"
+                  >Select</button></td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

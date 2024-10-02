@@ -1,0 +1,145 @@
+Express Handlebars Boilerplate
+==============================
+
+This is a boilerplate for building a web application using Express and Handlebars as the view engine. It includes several features and best practices to help you get started with your project.
+
+Project Structure
+-----------------
+
+The project structure is organized as follows:
+
+Copy
+
+`- .env
+- .gitignore
+- combined.log
+- error.log
+- eslint.config.mjs
+- package-lock.json
+- package.json
+- sessions
+  - sessions.db
+- src
+  - app.js
+  - config
+    - database.js
+    - express.js
+    - logger.js
+  - controllers
+    - index.js
+  - middleware
+    - errorHandler.js
+  - models
+  - public
+    - css
+      - styles.css
+    - img
+    - js
+      - main.js
+  - routes
+    - index.js
+  - server.js
+  - views
+    - error.handlebars
+    - home.handlebars
+    - layouts
+      - main.handlebars
+    - partials
+      - footer.handlebars
+      - header.handlebars
+    - products.handlebars
+    - users.handlebars
+  - __tests__
+    - app.test.js
+- webpack.config.js`
+
+### Root-level Files and Directories
+
+1.  **`.env`**: This file contains the environment variables used by the application, such as the session secret, port number, and any other configuration settings that should be kept outside of the codebase.
+2.  **`.gitignore`**: This file specifies which files and directories should be ignored by Git, preventing sensitive or unnecessary files from being committed to the repository.
+3.  **`combined.log`** and **`error.log`**: These files are used by the Winston logger to store logs. The `combined.log` file contains all logged messages, while the `error.log` file only contains error-level logs.
+4.  **`eslint.config.mjs`**: This file contains the configuration for the ESLint linter, which is used to enforce code style and quality standards.
+5.  **`package-lock.json`** and **`package.json`**: These files manage the project dependencies, ensuring consistent versions across different environments.
+6.  **`sessions`**: This directory contains the SQLite3 session store database file, which is used to persist user session data.
+7.  **`webpack.config.js`**: This file contains the Webpack configuration for bundling the application for production deployment.
+
+### `src` Directory
+
+This is the main directory for the application source code.
+
+1.  **`app.js`**: This is the main Express application file, where the server is configured and middleware is applied.
+2.  **`config`** directory:
+    -   **`database.js`**: This file is intended for configuring and initializing the database connection. Since the boilerplate is database-agnostic, this file is currently empty, and you should add your own database setup code here.
+    -   **`express.js`**: This file contains the configuration for the Express application, such as setting up Handlebars as the view engine, defining global middleware, and configuring the API client.
+    -   **`logger.js`**: This file sets up the Winston logger, which is used for logging throughout the application.
+3.  **`controllers`** directory:
+    -   **`index.js`**: This file contains the controller functions that handle the different routes in the application, such as rendering the home page, fetching and displaying products, and fetching and displaying users.
+4.  **`middleware`** directory:
+    -   **`errorHandler.js`**: This file defines the error handling middleware, which is responsible for rendering the error view or sending a JSON response in case of an error.
+5.  **`models`** directory:
+    -   This directory is intended for defining your database models and schemas. Since the boilerplate is database-agnostic, this directory is currently empty, and you should add your own model files here as you build out your application.
+6.  **`public`** directory:
+    -   **`css`** directory:
+        -   **`styles.css`**: This file contains any custom CSS styles for your application.
+    -   **`img`** directory:
+        -   This directory is intended for storing static image assets used in your application.
+    -   **`js`** directory:
+        -   **`main.js`**: This file is where you can add any client-side JavaScript code for your application.
+7.  **`routes`** directory:
+    -   **`index.js`**: This file defines the route handlers for the different endpoints in your application, such as the home page, products page, and users page.
+8.  **`server.js`**: This file sets up the HTTP server and starts the application.
+9.  **`views`** directory:
+    -   **`error.handlebars`**: This is the view template for rendering error pages.
+    -   **`home.handlebars`**: This is the view template for rendering the home page.
+    -   **`layouts`** directory:
+        -   **`main.handlebars`**: This is the main layout template that wraps the content of individual views.
+    -   **`partials`** directory:
+        -   **`footer.handlebars`**: This is a partial template for the application footer.
+        -   **`header.handlebars`**: This is a partial template for the application header.
+    -   **`products.handlebars`**: This is the view template for rendering the products page.
+    -   **`users.handlebars`**: This is the view template for rendering the users page.
+10. **`__tests__`** directory:
+    -   **`app.test.js`**: This file contains the Jest tests for the application.
+
+Getting Started
+---------------
+
+1.  Clone the repository: `git clone https://github.com/your-username/express-handlebars-boilerplate.git`
+2.  Install dependencies: `npm install`
+3.  Set up the environment variables in the `.env` file.
+4.  Start the development server: `npm run dev`
+5.  Build the production bundle: `npm run build`
+6.  Run the production server: `npm start`
+
+Configuration
+-------------
+
+### Environment Variables
+
+The following environment variables are used in the application:
+
+-   `NODE_ENV`: Specifies the current environment (development, production, etc.).
+-   `PORT`: The port number on which the server will listen.
+-   `SESSION_SECRET`: The secret used to sign the session cookie.
+
+### Database Configuration
+
+The boilerplate is designed to be database-agnostic, so the `database.js` file in the `config` directory is left empty. You should add your own database configuration and setup code in this file based on the database you're using (e.g., MongoDB, PostgreSQL, MySQL).
+
+### Logging
+
+The boilerplate uses the Winston logger for logging. The logging configuration is defined in the `logger.js` file in the `config` directory. By default, the logger writes logs to the `combined.log` and `error.log` files. You can customize the logging configuration as needed.
+
+### Testing
+
+The boilerplate includes a basic setup for testing using Jest. The tests are located in the `__tests__` directory. You can add more tests as you develop your application.
+
+Deployment
+----------
+
+The boilerplate is set up to be easily deployed. The `webpack.config.js` file is used to bundle the application for production. You can use a hosting service like Heroku, AWS, or your own server to deploy the application.
+
+License
+-------
+
+This project is licensed under the [MIT License](LICENSE).
