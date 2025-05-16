@@ -89,7 +89,7 @@ The frontend layer shows the user interface components:
 
 #### Visitor Flow Process
 
-![Visitor Flow](documentation-images\mermaid-diagram-2025-05-16-094852.png)
+![Visitor Flow](https://github.com/3DServiqual/Visitor-Log-Book/blob/main/documentation-images/mermaid-diagram-2025-05-16-094852.png)
 The visitor flow process illustrates the complete journey:
 
 1. Visitor Arrives
