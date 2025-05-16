@@ -56,7 +56,7 @@ Below are detailed diagrams for a visual representation of the system architectu
 
 #### Database Schema
 
-![Database Schema](documentation-images\mermaid-diagram-2025-05-16-100130.png)
+![Database Schema](https://github.com/3DServiqual/Visitor-Log-Book/blob/main/documentation-images/mermaid-diagram-2025-05-16-100130.png)
 The database schema diagram shows the VisitorLog table structure with its fields including:
 
 - date (DATE)
@@ -70,7 +70,7 @@ The database schema diagram shows the VisitorLog table structure with its fields
 
 #### Backend Layer
 
-![Backend Layer](documentation-images\mermaid-diagram-2025-05-16-095846.png)
+![Backend Layer](https://github.com/3DServiqual/Visitor-Log-Book/blob/main/documentation-images/mermaid-diagram-2025-05-16-095846.png)
 The backend architecture follows a clear hierarchical structure:
 
 - Express Server at the top level
@@ -80,7 +80,7 @@ The backend architecture follows a clear hierarchical structure:
 
 #### Frontend Layer
 
-![Frontend Layer](documentation-images\mermaid-diagram-2025-05-16-095831.png)
+![Frontend Layer](https://github.com/3DServiqual/Visitor-Log-Book/blob/main/documentation-images/mermaid-diagram-2025-05-16-095831.png)
 The frontend layer shows the user interface components:
 
 - Web Interface as the main entry point
